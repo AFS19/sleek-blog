@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->unique(['setting_id', 'locale']);
             $table->foreign('setting_id')->references('id')->on('settings')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 

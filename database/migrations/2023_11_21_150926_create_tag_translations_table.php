@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->unique(['tag_id', 'locale']);
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 

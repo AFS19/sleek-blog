@@ -19,7 +19,6 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->text('smallDesc')->nullable();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
